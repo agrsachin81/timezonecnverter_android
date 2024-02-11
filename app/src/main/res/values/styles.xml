@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="LabelStyle" parent="android:Widget.TextView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item> <!-- Adjust the text size as needed -->
+    </style>
+
+    <style name="SpinnerStyle" parent="android:Widget.Spinner">
+        <item name="android:textSize">20sp</item> <!-- Adjust the text size as needed -->
+    </style>
+</resources>

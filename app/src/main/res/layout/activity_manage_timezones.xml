@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- RecyclerView for displaying the list of timezone mappings -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/timezonesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/divider"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp"
+        android:layout_weight="0.6"
+        android:background="@android:color/white"
+        android:clipToPadding="false"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:paddingBottom="4dp" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerVertical="true"
+        android:background="#000000" />
+
+    <!-- Panel for editing labels and selecting timezones -->
+    <LinearLayout
+        android:id="@+id/editPanel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/divider"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="0.4"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+        <!-- Label for editing -->
+        <TextView
+            android:id="@+id/editLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Label"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- EditText for entering/editing label -->
+        <EditText
+            android:id="@+id/editLocationEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Enter label" />
+
+        <TextView
+            android:id="@+id/selectTimeZoneTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select TimeZone"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <!-- Spinner for selecting timezone -->
+
+
+        <ListView
+            android:id="@+id/timezoneListView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray" />
+
+
+        <!-- Buttons for adding/updating mappings and removing mappings -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/addNewTimeZone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="true"
+                android:text="Add New" />
+
+            <Button
+                android:id="@+id/updateExistingTimeZone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:enabled="false"
+                android:text="Update" />
+
+            <Button
+                android:id="@+id/resetAddUpdatePanel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginStart="8dp"
+                android:enabled="true"
+                android:text="Reset" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
